@@ -1,0 +1,18 @@
+// Factorial of "in" ?
+module test2(out, in);
+output [31:0]out;
+input [3:0]in;
+
+function automatic integer factorial;
+input [3:0]num;
+begin
+if(num>=2)
+factorial = factorial(num-1)*num;
+else 
+factorial = 1;
+end
+endfunction
+
+assign out = factorial(in);
+
+endmodule
